@@ -1,1 +1,3 @@
-# Repository to test various RL related code and try out new things for now. Might add more projects on the go.....
+# Reinforcement Learning Experiments
+
+This repo contains various RL code experiments and small projects. More will be added over time.
