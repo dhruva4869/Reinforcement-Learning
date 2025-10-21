@@ -1,0 +1,36 @@
+Reinforcement learning ->
+    Q learning
+    -> Simple discrete method
+    -> Gamma and formula is rt + gamma*rt+1.....
+    -> Gamma can be 0 to 1 and 1 means will keep all history
+    -> PI function for argmax and then considers 
+
+    Policy Gradient
+    -> continuos as well handled
+    -> uses epsilon, gradients, etc
+    -> iteratively improves the outcomes, uses policy probablities at each step
+    -> feeds the latest action to the state, creating new state, and process keeps going on till maximize the rewards
+
+    A2C (Advantage Actor Critic)
+    -> There is now a critic involved.
+    -> Losses from both action and critic are now to be considered
+
+    A3C (Async A2C)
+    -> Async
+    -> Parallelize multiple agents models and parameters using A2C
+
+Certain issues ->
+    CAP issue (Credit Assignment Problem)
+    -> All rewards are added up but we do not know what action had more weightage
+    -> Somehow we need to solve this
+    Fixes ->
+        -> TD (Temporal Difference) 
+        Based on current outcomes, we predict what we can get in future and reward the current state weightage accordingly so bootstrapping
+        -> Monte Carlo Methods
+        For every sequence episode, we take an average and based off the averages of all the sequences, we assign the scores, no bootstrapping
+        -> Eligibility traces
+        Assign credit to just recent past actions based on the current action / recent future
+    
+    Exploration vs Exploitation Dilemma
+    -> When to explore the new things and when to exploit the rewards
+    -> We fix this by using the epsilon greddy strategy
